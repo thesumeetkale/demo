@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Creation</title>
+    <style type="text/css">
+    td {
+        color: Green;
+    }
+
+    table,
+    th,
+    td {
+        border: 5px solid black;
+    }
+
+    td {
+        width: 5px;
+        color: pink;
+    }
+
+    tr:hover {
+        background-color: blue;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <center>
+        <fieldset>
+            <legend align="center"> MY FORM</legend>
+            <a href="index2.html">Next Page	</a>
+            <h5 style="border: 10px solid red;"> SOLID BORDER AVAIL</h5>
+            <h5 style="border: 10px dotted red;"> DOTTED BORDER AVAIL</h5>
+            <h5 style="border: 10px double red;"> DOUBLE BORDER AVAIL</h5>
+            <h5 style="border: 10px groove red;"> GROOVE BORDER AVAIL</h5>
+            <h5 style="border: 10px ridge red;"> RIDGE BORDER AVAIL</h5>
+            <table>
+                <form method="post" action="index2.html">
+                    <tr>
+                        <td align="center">
+                            <mark>USERNAME : </mark> <!-- Highlighting the text-->
+                        </td>
+                        <td align="center">
+                            <input type="text" name="uname" placeholder="Username please" pattern="[A-Za-z](?!.*\d)(?!.*\W+).{2,25}" title="Please Enter Username" required=""> </td>
+                    </tr>
+                    <tr>
+                        <td align="center">PASSWORD :</td>
+                        <td align="center">
+                            <input type="password" name="pass" placeholder="Password please" title="Password Must contain at least one number and one uppercase and lowercase letter, one special character and at least 3 or more characters" pattern="(?=.*\d)(?=.*\W+)(?=.*[a-z])(?!=.*[A-Z]).{3,25}" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="border: 2px red;">YOUR AGE :</td>
+                        <td align="center">
+                            <input type="number" name="age" min="10" max="60" placeholder="Enter Age" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">YOUR ADDRESS :</td>
+                        <td align="center">
+                            <textarea placeholder="Enter your address"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">SELECT CITY :</td>
+                        <td align="center">
+                            <select name="city">
+                                <option selected="">Select City</option>
+                                <option value="1">Pune</option>
+                                <option value="2">Parbhani</option>
+                                <option value="3">Mumbai</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">GENDER :</td>
+                        <td align="center">
+                            <input type="radio" name="gender" required="">MALE
+                            <input type="radio" name="gender">FEMALE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center"> MOBILE NUMBER :</td>
+                        <td align="center">
+                            <input name="mob" class="input" placeholder="0123456789" pattern="(?=.*\d)(?!.*\W+)(?!.*[a-z])(?!.*[A-Z]).{10,10}" title="Please Enter Telephone Number" required="" type="tel">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">TYPE OF VEHICLE :</td>
+                        <td align="center">
+                            <input type="checkbox" name="vehicle" title="Select your vehicle">Car
+                            <input type="checkbox" name="vehicle" title="Select your vehicle">Bike
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">PHOTO :</td>
+                        <td align="center">
+                            <input type="file" name="photo" title="Select your photo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" name="submit" value="Proceed">
+                        </td>
+                    </tr>
+            </table>
+            </form>
+        </fieldset>
+    </center>
+</body>
+
+</html>
